@@ -45,5 +45,3 @@ print "training time:", round(time()-t0, 3), "s"
 print accuracy
 
 #########################################################
-
-
