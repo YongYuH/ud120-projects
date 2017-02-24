@@ -31,12 +31,17 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+from sklearn.ensemble import AdaBoostClassifier
 
+clf = AdaBoostClassifier()
+clf.fit(features_train, labels_train)
 
+pred = clf.predict(features_test)
 
+from sklearn.metrics import precision_score
 
-
-
+accuracy = precision_score(labels_test, pred)
+print accuracy
 
 try:
     prettyPicture(clf, features_test, labels_test)
